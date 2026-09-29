@@ -1,0 +1,60 @@
+{
+  "name": "obix-core-native",
+  "version": "0.5.0",
+  "description": "TypeScript native-provider registry, platform/ABI selection, lazy loading and managed handles. Node-API preferred; FFI opt-in and version-gated.",
+  "license": "MIT",
+  "author": "OBINexus Computing — Nnamdi Michael Okpala <okpalan@protonmail.com>",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./node": {
+      "types": "./dist/node.d.ts",
+      "import": "./dist/node.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "src",
+    "docs",
+    "README.md",
+    "LICENSE",
+    "test",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --test \"test/*.test.mjs\""
+  },
+  "dependencies": {
+    "obix-core-capabilities": "0.5.0"
+  },
+  "keywords": [
+    "obix",
+    "obix-core",
+    "compatibility",
+    "host",
+    "native"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/obinexus/obix-core-native.git"
+  },
+  "bugs": {
+    "url": "https://github.com/obinexus/obix-core-native/issues"
+  },
+  "homepage": "https://github.com/obinexus/obix-core-native#readme"
+}

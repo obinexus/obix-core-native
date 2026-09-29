@@ -1,0 +1,112 @@
+{
+  "package": "obix-core-native",
+  "dir": "core/obix-core-native",
+  "importedBy": "scripts/recovery/import-packages.mjs",
+  "snapshot": "snap-20260924T142414Z",
+  "stage": "stage-2 lift-and-shift (base owner; later stages repair/merge)",
+  "sources": [
+    {
+      "label": "upstream:obix-core-native@21517b5",
+      "repo": "obix-core-native",
+      "url": "https://github.com/obinexusmk2/obix-core-native",
+      "sha": "21517b54c62ab1ba1abfdd7f38d59ea94d27c54c",
+      "path": ".",
+      "license": "MIT",
+      "licenseFileUpstream": true,
+      "filesImported": 6,
+      "filesExcluded": 11
+    }
+  ],
+  "originalManifest": {
+    "name": "@obinexusltd/obix-core-native",
+    "version": "0.1.0",
+    "license": "MIT",
+    "bin": null,
+    "scripts": {
+      "build": "tsc -p tsconfig.json",
+      "test": "node --test \"test/*.test.mjs\"",
+      "prepublishOnly": "npm run build"
+    }
+  },
+  "transforms": [
+    "package.json regenerated (lockstep version, exact internal pins, exports with \"types\" first, standard scripts)",
+    "tsconfig.json generated (NodeNext via tsconfig.base.json; @types/node enabled)",
+    "internal specifiers renamed: none",
+    "relative imports given \".js\"/\"/index.js\" extensions: 0",
+    "dependencies dropped: @obinexusltd/obix-core-modules (declared in dependencies, never imported)"
+  ],
+  "localFixes": [
+    {
+      "file": "src/node.ts",
+      "why": "scope (brief: no other OBINexus projects): `inspectNodePolycall`/`PolycallInspection` coupled the package to `@obinexusltd/node-polycall`, another OBINexus project. Retired (breaking, decision D-26); the native-provider registry itself is untouched."
+    },
+    {
+      "file": "src/node.ts",
+      "why": "scope (brief: no other OBINexus projects): `inspectNodePolycall`/`PolycallInspection` coupled the package to `@obinexusltd/node-polycall`, another OBINexus project. Retired (breaking, decision D-26); the native-provider registry itself is untouched."
+    },
+    {
+      "file": "src/index.ts",
+      "why": "scope (brief: no other OBINexus projects): `inspectNodePolycall`/`PolycallInspection` coupled the package to `@obinexusltd/node-polycall`, another OBINexus project. Retired (breaking, decision D-26); the native-provider registry itself is untouched."
+    },
+    {
+      "file": "README.md",
+      "why": "scope (brief: no other OBINexus projects): `inspectNodePolycall`/`PolycallInspection` coupled the package to `@obinexusltd/node-polycall`, another OBINexus project. Retired (breaking, decision D-26); the native-provider registry itself is untouched."
+    },
+    {
+      "file": "README.md",
+      "why": "scope (brief: no other OBINexus projects): `inspectNodePolycall`/`PolycallInspection` coupled the package to `@obinexusltd/node-polycall`, another OBINexus project. Retired (breaking, decision D-26); the native-provider registry itself is untouched."
+    },
+    {
+      "file": "README.md",
+      "why": "scope (brief: no other OBINexus projects): `inspectNodePolycall`/`PolycallInspection` coupled the package to `@obinexusltd/node-polycall`, another OBINexus project. Retired (breaking, decision D-26); the native-provider registry itself is untouched."
+    },
+    {
+      "file": "README.md",
+      "why": "scope (brief: no other OBINexus projects): `inspectNodePolycall`/`PolycallInspection` coupled the package to `@obinexusltd/node-polycall`, another OBINexus project. Retired (breaking, decision D-26); the native-provider registry itself is untouched."
+    },
+    {
+      "file": "docs/provider-model.md",
+      "why": "scope (brief: no other OBINexus projects): `inspectNodePolycall`/`PolycallInspection` coupled the package to `@obinexusltd/node-polycall`, another OBINexus project. Retired (breaking, decision D-26); the native-provider registry itself is untouched."
+    },
+    {
+      "file": "test/native.test.mjs",
+      "why": "scope (brief: no other OBINexus projects): `inspectNodePolycall`/`PolycallInspection` coupled the package to `@obinexusltd/node-polycall`, another OBINexus project. Retired (breaking, decision D-26); the native-provider registry itself is untouched."
+    },
+    {
+      "file": "test/native.test.mjs",
+      "why": "scope (brief: no other OBINexus projects): `inspectNodePolycall`/`PolycallInspection` coupled the package to `@obinexusltd/node-polycall`, another OBINexus project. Retired (breaking, decision D-26); the native-provider registry itself is untouched."
+    }
+  ],
+  "scopeScrub": {
+    "rule": "scripts/recovery/scrub-rules.mjs (brief: no other OBINexus projects)",
+    "replacementsPerFile": {}
+  },
+  "authoredOverlay": [],
+  "excluded": [
+    "dist/**",
+    "node_modules/**",
+    "lockfiles",
+    "tsconfig*.json (regenerated)",
+    ".gitignore",
+    ".github/**",
+    "coverage/**"
+  ],
+  "unresolvedRelativeImports": [],
+  "note": "scope: `inspectNodePolycall`/`PolycallInspection` (published in core-native@0.1.0 `/node`) are retired — see D-26",
+  "renamedFrom": [
+    {
+      "name": "@obinexusltd/obix-core-native",
+      "dir": "core/obix-core-native",
+      "stage": "unscoped-naming",
+      "why": "D-102 (2026-09-29): OBIX packages are named without an npm scope — previous name @obinexusltd/obix-core-native, current name obix-core-native (docs/recovery/unscoped-migration.md); the directory, version and exports are unchanged"
+    }
+  ],
+  "export": {
+    "from": "https://github.com/obinexusmk2/obix-monorepo",
+    "branch": "recovery/obix-api-preserving-rebuild",
+    "commit": "69cafc94910c1add865a520877617ac307668875",
+    "directory": "core/obix-core-native",
+    "exportedBy": "scripts/release/export-repos.mjs",
+    "note": "a clean initial commit of this package; the monorepo history is not imported (D-103). Local machine paths in this record are replaced by <local workspace>."
+  }
+}
